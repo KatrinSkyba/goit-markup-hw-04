@@ -238,7 +238,7 @@ address {
 	background-image: url(../images/4-first-section.svg);
 }
 
-. .section-subtitle {
+.section-subtitle {
 	font-size: var(--main-font-size);
 	font-weight: 700;
 	line-height: 1.14;
