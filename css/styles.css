@@ -123,21 +123,22 @@ address {
 .header-list {
   display: flex;
 }
-.header-item,
+/* .header-item,
 .contacts-item {
   padding-top: 32px;
   padding-bottom: 32px;
-}
+} */
 .header-item:not(:last-child),
 .contacts-item:not(:last-child) {
   margin-right: 50px;
 }
 .nav-link.link {
+  display: block;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .nav-link:hover,
@@ -161,12 +162,14 @@ address {
 }
 .mail,
 .tel {
+  display: flex;
+  align-items: center;
   color: var(--secondary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .mail:hover,
 .mail:focus {
@@ -189,13 +192,16 @@ address {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--hero-background-color);
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero-background.jpg);
+  background-size: contain;
+  background-color: var(--hero-background-color);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hero-title {
   font-weight: 900;
@@ -227,13 +233,11 @@ address {
 }
 /* ********************************   FIRST SECTION   ******************************** */
 
-.first-section-list {
+.section-list {
   display: flex;
-  justify-content: center;
   gap: 30px;
-  margin-bottom: 30px;
 }
-.first-section-link {
+.icon-thumb {
   width: 270px;
   height: 120px;
   border-radius: 4px;
@@ -241,14 +245,8 @@ address {
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-bottom: 30px;
 }
-.section-list {
-  display: flex;
-}
-.section-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .section-subtitle {
   font-size: var(--main-font-size);
   font-weight: 700;
@@ -328,25 +326,28 @@ address {
   gap: 10px;
 }
 .team-contacts-link {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--icon-color);
 }
-.team-contacts-icon {
-  fill: var(--icon-color);
-}
+
 .team-contacts-link:hover,
 .team-contacts-link:focus {
   background-color: var(--accent-color);
+  color: var(--background-color);
+}
+.team-contacts-icon {
+  fill: currentColor;
 }
 
-.team-contacts-link:hover .team-contacts-icon,
+/* .team-contacts-link:hover .team-contacts-icon,
 .team-contacts-link:focus .team-contacts-icon {
   fill: var(--background-color);
-}
+} */
 
 <!-- /**************************   CLIENTS-SECTION   **************************/ -->
 
@@ -368,22 +369,18 @@ address {
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-color);
+  color: var(--icon-color);
   border-radius: 4px;
   align-items: center;
   justify-content: center;
 }
-
 .clients-icon {
-  fill: var(--icon-color);
+  fill: currentColor;
 }
 .clients-section-link:hover,
 .clients-section-link:focus {
   border-color: var(--accent-color);
-}
-
-.clients-section-link:hover .clients-icon,
-.clients-section-link:focus .clients-icon {
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /*********************************   FOOTER   *********************************/
@@ -472,13 +469,15 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--background-color);
   background-color: var(--icon-footer-background);
 }
 .footer-icon {
-  fill: var(--background-color);
+  fill: currentColor;
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
+  color: var(--background-color);
   background-color: var(--accent-color);
 }
 
