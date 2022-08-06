@@ -52,7 +52,7 @@ button {
 address {
   font-style: normal;
 }
-/* Класи з однаковими елементами */
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -63,14 +63,13 @@ address {
   padding-right: 15px;
   margin: 0 auto;
 }
-/* Прибираємо крапки зі списків */
-/* Обнуляємо padding and margin списків */
+
 .list {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-/* Прибираємо підкреслення у посилань */
+
 .link {
   text-decoration: none;
   color: inherit;
@@ -87,6 +86,7 @@ address {
   clip-path: inset(50%);
   margin: -1px;
 }
+
 /*********************************   HEADER   *********************************/
 .header {
   border-bottom: 1px solid var(--header-border-color);
@@ -101,21 +101,21 @@ address {
   align-items: center;
 }
 .header-link {
+  padding-top: 24px;
+  padding-bottom: 25px;
   margin-right: 93px;
 }
 .logo {
-  color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
-.logo-accent {
+.first-logo {
+  color: var(--accent-color);
+}
+.second-logo {
   color: var(--logo-color);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
 }
 .header-list .link {
   color: var(--main-text-color);
@@ -123,11 +123,6 @@ address {
 .header-list {
   display: flex;
 }
-/* .header-item,
-.contacts-item {
-  padding-top: 32px;
-  padding-bottom: 32px;
-} */
 .header-item:not(:last-child),
 .contacts-item:not(:last-child) {
   margin-right: 50px;
@@ -145,8 +140,7 @@ address {
 .nav-link:focus {
   color: var(--accent-color);
 }
-.nav-link.current,
-.mail.current {
+.nav-link.current {
   color: var(--accent-color);
 }
 .header-contacts {
@@ -198,7 +192,7 @@ address {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero-background.jpg);
-  background-size: contain;
+  background-size: cover;
   background-color: var(--hero-background-color);
   background-repeat: no-repeat;
   background-position: center;
@@ -238,13 +232,14 @@ address {
   gap: 30px;
 }
 .icon-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
   border-radius: 4px;
   background-color: var(--additional-background-color);
-  align-items: center;
-  justify-content: center;
-  display: flex;
+
   margin-bottom: 30px;
 }
 .section-subtitle {
@@ -391,36 +386,22 @@ address {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer-adress {
-  width: 231px;
   margin-right: 70px;
-}
-.second-logo {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.17;
-  color: var(--accent-color);
-}
-.logo-second {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.17;
-  color: var(--background-color);
 }
 .footer-logo {
   display: block;
   margin-bottom: 20px;
 }
-.adress {
-  max-width: 231px;
+.logo-second {
+  color: var(--background-color);
 }
+
 .footer-point {
   line-height: 1.71;
   color: var(--background-color);
-  font-style: normal;
   display: block;
   margin-bottom: 9px;
 }
@@ -431,7 +412,6 @@ address {
 .footer-link {
   line-height: 1.71;
   color: var(--additional-color);
-  font-style: normal;
 }
 .footer-link:hover,
 .footer-link:focus {
@@ -440,22 +420,13 @@ address {
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
-
-.footer-soc {
-  display: flex;
-  margin-top: 15px;
-  flex-direction: column;
-}
 .footer-soc-title {
-  font-style: normal;
   font-weight: 700;
   font-size: var(--main-font-size);
   line-height: 1.14;
-  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
-  margin-right: auto;
+  color: var(--background-color);
   margin-bottom: 20px;
 }
 .footer-soc-list {
